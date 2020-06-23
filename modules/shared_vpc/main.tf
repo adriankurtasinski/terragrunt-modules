@@ -15,7 +15,7 @@ locals {
 data "aws_vpc" "vpc" {
   filter {
     name   = "owner-id"
-    values = local.vpc_account_id
+    values = [local.vpc_account_id]
   }
 }
 
